@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Sample</title>
+	
+	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>&nbsp;GeeksException</li>
+				<li><a id="home" href="home.html">Home</a></li>
+				<li><a id="aboutus" href="about.html">About Us</a></li>
+				<li><a id="products" href="/products">Products</a></li>
+				<li><a id="services" href="/services">Services</a></li>         
+				<li><a id="contact" href="contact.html" class="selected">Contact</a></li>
+		    </ul>
+		</nav>
+	</header>
+	<div class="container">
+	<section class="intro">
+		<h2>We'd love to hear from you,</h2>
+		<h3>Send us a mail</h3>
+		<table>
+			<tbody>
+				<tr>
+					<td><label for="name">Name</label></td>
+					<td><input id="name" name="name" class="textbox default" type="text" title="Please enter your name" placeholder="Enter your name&hellip;" required="required" /></td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr>
+					<td><label for="phone">Phone number</label></td>
+					<td><input id="phone" name="phone" class="textbox default" type="text" title="Please enter your email" placeholder="Enter your phone number&hellip;" required="required" /></td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr>
+					<td><label for="email">E-mail</label></td>
+					<td><input id="email" name="email" class="textbox default" type="email" title="Please enter your email" placeholder="Enter your email&hellip;" required="required" /></td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+				<tr>
+					<td><label for="concern">Concern</label></td>
+					<td><textarea id="concern" name="concern" class="textarea default" cols="50" rows="10" title="Please enter your concern" placeholder="Enter your concern&hellip;" required="required"></textarea></td>
+				</tr>
+				<tr><td colspan="2">&nbsp;</td></tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>&nbsp;</td>
+					<td align="right"><button class="button">Send</button></td>
+				</tr>
+			</tfoot>
+		</table>
+	</section>
+	</div>
+	<footer>
+	  <div class="site-footer">
+	  	<ul class="site-footer-links right">
+	      <li><a href="https://status.github.com/">Status</a></li>
+	      <li><a href="http://developer.github.com">API</a></li>
+	      <li><a href="http://training.github.com">Training</a></li>
+	      <li><a href="http://shop.github.com">Shop</a></li>
+	      <li><a href="/blog">Blog</a></li>
+	      <li><a href="/about">About</a></li>
+	    </ul>
+	
+	    <a href="/">
+	      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+	    </a>
+	
+	    <ul class="site-footer-links">
+	      <li>&copy; 2014 GeeksException, inc.</li>
+	        <li><a href="/site/terms">Terms</a></li>
+	        <li><a href="/site/privacy">Privacy</a></li>
+	        <li><a href="/security">Security</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	    </ul>
+	  </div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/application.js"></script>
+</body>
+</html>

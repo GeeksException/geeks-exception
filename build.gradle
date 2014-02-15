@@ -1,0 +1,74 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'jetty'
+apply plugin: 'maven'
+
+buildscript {
+	repositories {
+		mavenCentral()
+		maven { url "http://repo.spring.io/libs-milestone" }
+	}
+}
+
+project.ext {
+    springVersion = '4.0.0.RELEASE'
+}
+
+repositories {
+	mavenCentral()
+	maven { url "http://repo.spring.io/libs-milestone" }
+}
+
+dependencies {
+	
+	compile "jstl:jstl:1.2"
+	
+	compile "javax.inject:javax.inject:1"
+	
+	testCompile "junit:junit:4.+"
+	testCompile "org.mockito:mockito-all:1.9.5"
+	
+	compile "org.springframework:spring-webmvc:$springVersion"
+	compile "org.thymeleaf:thymeleaf-spring3:2.0.17"
+	
+	compile "javax.mail:mail:1.4.7"
+}
+
+task wrapper(type: Wrapper) {
+	description = 'Generates gradlew[.bat] scripts'
+    gradleVersion = '1.8'
+}
+
+task initProject () << {
+	project.apply { plugin('war') }
+
+	project.sourceSets*.allSource.srcDirTrees.flatten().dir.each { dir ->
+		dir.mkdirs()
+	}
+}
+
+task writePom << {
+    pom {
+        project {
+            inceptionYear '2013'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("$buildDir/pom.xml")
+}
+
+jettyRun {
+    contextPath = "/"
+}
+
+jettyRunWar.contextPath = ''
+
+war {
+	archiveName = 'ROOT.war'
+	destinationDir = file('webapps')
+}
