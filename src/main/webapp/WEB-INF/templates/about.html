@@ -1,103 +1,70 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Sample</title>
+	<title th:text="#{webapp.title}">Sample</title>
 	
-	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
-	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
+	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>&nbsp;GeeksException</li>
-				<li><a id="home" href="home.html">Home</a></li>
-				<li><a id="aboutus" href="about.html" class="selected">About Us</a></li>
-				<li><a id="products" href="/products">Products</a></li>
-				<li><a id="services" href="/services">Services</a></li>         
-				<li><a id="contact" href="contact.html">Contact</a></li>
-		    </ul>
-		</nav>
-	</header>
+	<header th:include="common :: header"></header>
 	<div class="container">
-	<section class="intro">
-		<article>
-			<header>
-				<h2>GeeksException</h2>
-			</header>
-			
-			<p class="medium">GeeksException is a startup company that specializes on enterprise software, web design and product development.</p>
-		</article>
-	</section>
-	
-	<section class="common">
-		<article>
-			<header>
-				<h2>Who we are</h2>
-			</header>
-			
-			<p class="medium">We are a group of innovative and talented individuals that drive excellence at what we do. A team that is passionate in building software solutions that can transform user experience to a whole new level. What's more, we don't just build software by what the users tell us, we build software by what they really need even when they don't know it yet. Building a company that embraces this concept is very challenging yet very exciting for us. After all, everything is impossible until it's done.</p>
-		</article>
-	</section>
-	
-	<section class="common">
-		<article>
-			<header>
-				<h2>What we do</h2>
-			</header>
-			
-			<p class="medium">We provide a variety of enterprise software services and product support ranging from website and mobile website design to enterprise software solutions. The technology that we employ is different and tailored for every customer needs. We utilize powerful open source frameworks and tools that are widely used by communities and organizations today.</p>
-			<p class="medium">Currently, we are adapting the mobile platforms development to enable our clients to utilize their applications on their handheld devices and enable us to leverage the power of mobile apps.</p>
-		</article>
-	</section>
-	
-	<section class="common started">
-		<article>
-			<header class="section-title">
-				<h2>Core Values</h2>
-			</header>
-			
-			<p class="medium">Our core values are closely related to the principles behind the agile software development methodology. We have been agile proponents since the company's inception. The following are our key core values:</p>
-			<div><ul>
-				<li>Customer satisfaction and customer collaboration</li>
-				<li>Continuous technical excellence</li>
-				<li>Working software as primary measure of progress</li>
-				<li>Simplicity</li>
-				<li>Self-organizing teams</li>
-			</ul></div>
-		</article>
-	</section>
+		<section class="intro">
+			<article>
+				<header>
+					<h2>GeeksException</h2>
+				</header>
+				
+				<p class="medium">GeeksException is a startup company that specializes on enterprise software, web design and product development.</p>
+			</article>
+		</section>
+		
+		<section class="about">
+			<article>
+				<header>
+					<h2>Who we are</h2>
+				</header>
+				
+				<p class="medium">We are a group of innovative and talented individuals that drive excellence at what we do. A team that is passionate in building software solutions that can transform user experience to a whole new level. What's more, we don't just build software by what the users tell us, we build software by what they really need even when they don't know it yet. Building a company that embraces this concept is very challenging yet very exciting for us. After all, everything is impossible until it's done.</p>
+			</article>
+		</section>
+		
+		<section class="about">
+			<article>
+				<header>
+					<h2>What we do</h2>
+				</header>
+				
+				<p class="medium">We provide a variety of enterprise software services and product support ranging from website and mobile website design to enterprise software solutions. The technology that we employ is different and tailored for every customer needs. We utilize powerful open source frameworks and tools that are widely used by communities and organizations today.</p>
+				<p class="medium">Currently, we are adapting the mobile platforms development to enable our clients to utilize their applications on their handheld devices and enable us to leverage the power of mobile apps.</p>
+			</article>
+		</section>
+		
+		<section class="about">
+			<article>
+				<header>
+					<h2>Core Values</h2>
+				</header>
+				
+				<p class="medium">Our core values are closely related to the principles behind the agile software development methodology. We have been agile proponents since the company's inception. The following are our key core values:</p>
+				<div><ul>
+					<li>Customer satisfaction and customer collaboration</li>
+					<li>Continuous technical excellence</li>
+					<li>Working software as primary measure of progress</li>
+					<li>Simplicity</li>
+					<li>Self-organizing teams</li>
+				</ul></div>
+			</article>
+		</section>
 	</div>
-	<footer>
-	  <div class="site-footer">
-	  	<ul class="site-footer-links right">
-	      <li><a href="https://status.github.com/">Status</a></li>
-	      <li><a href="http://developer.github.com">API</a></li>
-	      <li><a href="http://training.github.com">Training</a></li>
-	      <li><a href="http://shop.github.com">Shop</a></li>
-	      <li><a href="/blog">Blog</a></li>
-	      <li><a href="/about">About</a></li>
-	    </ul>
-	
-	    <a href="/">
-	      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-	    </a>
-	
-	    <ul class="site-footer-links">
-	      <li>&copy; 2014 GeeksException, inc.</li>
-	        <li><a href="/site/terms">Terms</a></li>
-	        <li><a href="/site/privacy">Privacy</a></li>
-	        <li><a href="/security">Security</a></li>
-	        <li><a href="/contact">Contact</a></li>
-	    </ul>
-	  </div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/application.js"></script>
+	<footer th:include="common :: footer"></footer>
+	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+	<script src="../../js/jquery.visible.min.js" th:src="@{/js/jquery.visible.min.js}"></script>
 </body>
 </html>

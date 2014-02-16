@@ -20,9 +20,6 @@ repositories {
 }
 
 dependencies {
-	
-	compile "jstl:jstl:1.2"
-	
 	compile "javax.inject:javax.inject:1"
 	
 	testCompile "junit:junit:4.+"
@@ -32,6 +29,10 @@ dependencies {
 	compile "org.thymeleaf:thymeleaf-spring3:2.0.17"
 	
 	compile "javax.mail:mail:1.4.7"
+	
+	compile "log4j:log4j:1.2.16"
+	compile "org.slf4j:slf4j-api:1.7.2"
+	compile "org.slf4j:slf4j-log4j12:1.7.2"
 }
 
 task wrapper(type: Wrapper) {

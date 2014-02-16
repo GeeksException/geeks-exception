@@ -13,7 +13,7 @@
 	<context-param>
     	<param-name>contextConfigLocation</param-name>
     	<param-value>
-    		org.cognoscenti.stocks.config
+    		org.geeksexception.web.config
     	</param-value>
 	</context-param>
 	

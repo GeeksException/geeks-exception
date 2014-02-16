@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
+	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<header th:fragment="header">
+		<nav>
+			<ul>
+				<li th:text="#{webapp.title}">&nbsp;GeeksException</li>
+				<li><a id="home" href="home.html" th:text="#{home.text}" th:href="@{/home}">Home</a></li>
+				<li><a id="aboutus" href="about.html" th:text="#{about.text}" th:href="@{/about}">About Us</a></li>
+				<li><a id="portfolio" href="portfolio.html" th:text="#{portfolio.text}" th:href="@{/portfolio}">Portfolio</a></li>
+				<li><a id="services" href="services.html" th:text="#{services.text}" th:href="@{/services}">Services</a></li>         
+				<li><a id="contact" href="contact.html" th:text="#{contact.text}" th:href="@{/contact}">Contact</a></li>
+		    </ul>
+		</nav>
+	</header>
+	
+	<footer th:fragment="footer">
+	  <div class="site-footer">
+	  	<ul class="site-footer-links right">
+	      <li><a href="https://status.github.com/">Status</a></li>
+	      <li><a href="http://developer.github.com">API</a></li>
+	      <li><a href="http://training.github.com">Training</a></li>
+	      <li><a href="http://shop.github.com">Shop</a></li>
+	      <li><a href="/blog">Blog</a></li>
+	      <li><a href="/about">About</a></li>
+	    </ul>
+	
+	    <a href="/">
+	      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+	    </a>
+	
+	    <ul class="site-footer-links">
+	      <li th:text="#{copyright.text}">&copy; 2014 GeeksException, inc.</li>
+	        <li><a href="/site/terms">Terms</a></li>
+	        <li><a href="/site/privacy">Privacy</a></li>
+	        <li><a href="/security">Security</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	    </ul>
+	  </div>
+	</footer>
+</body>
+</html>

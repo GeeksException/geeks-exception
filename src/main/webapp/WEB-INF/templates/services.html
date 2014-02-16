@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title th:text="#{webapp.title}">Sample</title>
+	
+	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
+	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
+</head>
+<body>
+	<header th:include="common :: header"></header>
+	<div class="container">
+	<section class="intro">
+		<article>
+			<header>
+				<h2>Geeks Exception</h2>
+				<p>Posted on</p>
+			</header>
+		</article>
+	</section>
+	</div>
+	<footer th:include="common :: footer"></footer>
+	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+	<script src="../../js/application.js" th:src="@{/js/application.js}"></script>
+</body>
+</html>

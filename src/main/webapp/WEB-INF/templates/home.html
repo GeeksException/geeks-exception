@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Sample</title>
+	<title th:text="#{webapp.title}">Sample</title>
 	
-	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
-	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
+	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
 	<!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css' />
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>&nbsp;GeeksException</li>
-				<li><a id="home" href="home.html" class="selected">Home</a></li>
-				<li><a id="aboutus" href="about.html">About Us</a></li>
-				<li><a id="products" href="/products">Products</a></li>
-				<li><a id="services" href="/services">Services</a></li>         
-				<li><a id="contact" href="contact.html">Contact</a></li>
-		    </ul>
-		</nav>
-	</header>
+	<header th:include="common :: header"></header>
 	<div class="container">
 	<section class="intro">
 		<article>
@@ -34,31 +23,8 @@
 		</article>
 	</section>
 	</div>
-	<footer>
-	  <div class="site-footer">
-	  	<ul class="site-footer-links right">
-	      <li><a href="https://status.github.com/">Status</a></li>
-	      <li><a href="http://developer.github.com">API</a></li>
-	      <li><a href="http://training.github.com">Training</a></li>
-	      <li><a href="http://shop.github.com">Shop</a></li>
-	      <li><a href="/blog">Blog</a></li>
-	      <li><a href="/about">About</a></li>
-	    </ul>
-	
-	    <a href="/">
-	      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-	    </a>
-	
-	    <ul class="site-footer-links">
-	      <li>&copy; 2014 GeeksException, inc.</li>
-	        <li><a href="/site/terms">Terms</a></li>
-	        <li><a href="/site/privacy">Privacy</a></li>
-	        <li><a href="/security">Security</a></li>
-	        <li><a href="/contact">Contact</a></li>
-	    </ul>
-	  </div>
-	</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/application.js"></script>
+	<footer th:include="common :: footer"></footer>
+	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+	<script src="../../js/application.js" th:src="@{/js/application.js}"></script>
 </body>
 </html>
