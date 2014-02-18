@@ -33,6 +33,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		
 		registry.addResourceHandler("/css/**").addResourceLocations("/css/");
 		registry.addResourceHandler("/js/**").addResourceLocations("/js/");
+		registry.addResourceHandler("/sitemap/**").addResourceLocations("/sitemap/");
+		
 	}
 	
 	@Bean
