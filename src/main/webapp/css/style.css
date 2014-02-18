@@ -396,15 +396,15 @@ textarea.textarea {
 
 @media (max-width: 1024px) {
     input.textarea {
-        width: 250px;
+        width: 220px;
 		height: 180px;
     }
 }
 
 @media (max-width: 979px) {
     input.textarea {
-        width: 200px;
-		height: 160px;
+        width: 170px;
+		height: 150px;
     }
 }
 
