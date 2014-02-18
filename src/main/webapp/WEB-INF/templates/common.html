@@ -24,7 +24,7 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<nav>
 			<ul>
-				<li><div class="website-title" th:text="#{webapp.title}">&nbsp;GeeksException</div></li>
+				<li class="website-title"><div th:text="#{webapp.title}">&nbsp;GeeksException</div></li>
 				<li><a id="home" href="home.html" th:text="#{home.text}" th:href="@{/}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), '/')} ? 'selected' : ''">Home</a></li>
 				<li><a id="whatwedo" href="whatwedo.html" th:text="#{whatwedo.text}" th:href="@{/whatwedo}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'whatwedo')} ? 'selected' : ''">What we do</a></li>
 				<li><a id="portfolio" href="portfolio.html" th:text="#{portfolio.text}" th:href="@{/portfolio}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'portfolio')} ? 'selected' : ''">Portfolio</a></li>
