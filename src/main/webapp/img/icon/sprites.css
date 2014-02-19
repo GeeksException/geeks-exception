@@ -1,0 +1,34 @@
+.contact_icon, .home_icon, .portfolio_icon, .whatwedo_icon, .about{
+	background: url(sprites.png) no-repeat;
+}
+
+.contact_icon{
+	background-position: -96px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.home_icon{
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+}
+
+.portfolio_icon{
+	background-position: -64px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.whatwedo_icon{
+	background-position: -32px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.about{
+	background-position: 0 -32px ;
+	width: 32px;
+	height: 32px;
+}
+

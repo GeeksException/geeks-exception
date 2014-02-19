@@ -475,7 +475,7 @@ nav ul li:first-child a {
     border-bottom-left-radius: 3px;
 }
 
-nav ul li:first-child a:hover,.dashboard-tabs li:first-child a.selected {
+nav ul li:first-child a:hover {
     border-top-left-radius: 3px;
 }
 
@@ -484,7 +484,7 @@ nav ul li:last-child a {
     border-bottom-right-radius: 3px;
 }
 
-nav ul li:last-child a:hover,.dashboard-tabs li:last-child a.selected {
+nav ul li:last-child a:hover {
     border-top-right-radius: 3px;
 }
 
@@ -542,15 +542,87 @@ nav ul a .counter {
 }
 
 @media (max-width: 979px) {
-    .website-title {
+    nav ul li a span.menuTitle {
 		display: none;
-    }
+	}
+	
+	nav ul li a div {
+		margin-left: auto;
+		margin-right: auto;
+		background: url(../img/icon/icon_sprites.png) no-repeat;
+	}
+	
+	nav ul li a div#contact_icon {
+		background-position: -96px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#home_icon {
+		background-position: 0 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#portfolio_icon {
+		background-position: -64px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#whatwedo_icon {
+		background-position: -32px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#about_icon {
+		background-position: 0 -32px ;
+		width: 32px;
+		height: 32px;
+	}
 }
 
 @media (max-width: 767px) {
-    .website-title {
+    nav ul li a span.menuTitle {
 		display: none;
-    }
+	}
+	
+	nav ul li a div {
+		margin-left: auto;
+		margin-right: auto;
+		background: url(../img/icon/icon_sprites.png) no-repeat;
+	}
+	
+	nav ul li a div#contact_icon {
+		background-position: -96px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#home_icon {
+		background-position: 0 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#portfolio_icon {
+		background-position: -64px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#whatwedo_icon {
+		background-position: -32px 0;
+		width: 32px;
+		height: 32px;
+	}
+
+	nav ul li a div#about_icon {
+		background-position: 0 -32px ;
+		width: 32px;
+		height: 32px;
+	}
 }
 
 /* END NAV MENU */
@@ -1138,6 +1210,44 @@ section article header h2 {
 .l-grid-4:after,.l-grid-2:after {
 	clear:both;
 }
+
+/* icons */
+.contact_icon, .home_icon, .portfolio_icon, .whatwedo_icon, .about_icon {
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../img/icon/icon_sprites.png) no-repeat;
+}
+
+.contact_icon {
+	background-position: -96px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.home_icon {
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+}
+
+.portfolio_icon {
+	background-position: -64px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.whatwedo_icon {
+	background-position: -32px 0;
+	width: 32px;
+	height: 32px;
+}
+
+.about_icon {
+	background-position: 0 -32px ;
+	width: 32px;
+	height: 32px;
+}
+/* icons */
 
 /* slider */
 #slider { 
