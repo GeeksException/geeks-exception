@@ -25,7 +25,9 @@
 	<header th:include="common :: header"></header>
 	<div class="container">
 	<section class="intro">
-		<p th:if="${info != null}" th:text="#{mail.confirmation}" class="confirmation">Your concern has been sent to our team. We will get back to you as soon as we can. Thank you!</p>
+		<div th:if="${info != null}" class="confirmation">
+			<p th:text="#{mail.confirmation}">Your concern has been sent to our team. We will get back to you as soon as we can. Thank you!</p>
+		</div>
 		<h2>We love to hear from you,</h2>
 		<h3>Send us a mail!</h3>
 		
