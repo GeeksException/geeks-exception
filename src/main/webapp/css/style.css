@@ -881,6 +881,42 @@ section article header h2 {
     transform: translate3d(200px,0,0);
 }
 
+@media (max-width: 979px) {
+    .about:nth-child(1) {
+		-webkit-transform: translate3d(0,200px,0);
+		-moz-transform: translate3d(0,200px,0);
+		-o-transform: translate3d(0,200px,0);
+		-ms-transform: translate3d(0,200px,0);
+		transform: translate3d(0,200px,0);
+	}
+	
+	.about:nth-child(3) {
+		-webkit-transform: translate3d(0,200px,0);
+		-moz-transform: translate3d(0,200px,0);
+		-o-transform: translate3d(0,200px,0);
+		-ms-transform: translate3d(0,200px,0);
+		transform: translate3d(0,200px,0);
+	}
+}
+
+@media (max-width: 767px) {
+    .about:nth-child(1) {
+		-webkit-transform: translate3d(0,200px,0);
+		-moz-transform: translate3d(0,200px,0);
+		-o-transform: translate3d(0,200px,0);
+		-ms-transform: translate3d(0,200px,0);
+		transform: translate3d(0,200px,0);
+	}
+	
+	.about:nth-child(3) {
+		-webkit-transform: translate3d(0,200px,0);
+		-moz-transform: translate3d(0,200px,0);
+		-o-transform: translate3d(0,200px,0);
+		-ms-transform: translate3d(0,200px,0);
+		transform: translate3d(0,200px,0);
+	}
+}
+
 .started.about {
     opacity: 1;
     -ms-filter: none;
