@@ -808,7 +808,7 @@ section article header h2 {
 
 .about {
 	width: 324px;
-	height: 290px;
+	height: 315px;
 	display: inline-block;
 	vertical-align: top;
 	-moz-border-radius: 5px;
@@ -828,11 +828,6 @@ section article header h2 {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
-    -webkit-transform: translate3d(0,200px,0);
-    -moz-transform: translate3d(0,200px,0);
-    -o-transform: translate3d(0,200px,0);
-    -ms-transform: translate3d(0,200px,0);
-    transform: translate3d(0,200px,0);
 }
 
 .about:nth-child(1) {
@@ -841,6 +836,11 @@ section article header h2 {
     -o-transition-delay: 80ms;
     -ms-transition-delay: 80ms;
     transition-delay: 80ms;
+	-webkit-transform: translate3d(-200px,0,0);
+    -moz-transform: translate3d(-200px,0,0);
+    -o-transform: translate3d(-200px,0,0);
+    -ms-transform: translate3d(-200px,0,0);
+    transform: translate3d(-200px,0,0);
 }
 
 .about:nth-child(2) {
@@ -849,6 +849,11 @@ section article header h2 {
     -o-transition-delay: 160ms;
     -ms-transition-delay: 160ms;
     transition-delay: 160ms;
+	-webkit-transform: translate3d(0,200px,0);
+    -moz-transform: translate3d(0,200px,0);
+    -o-transform: translate3d(0,200px,0);
+    -ms-transform: translate3d(0,200px,0);
+    transform: translate3d(0,200px,0);
 }
 
 .about:nth-child(3) {
@@ -857,6 +862,11 @@ section article header h2 {
     -o-transition-delay: 240ms;
     -ms-transition-delay: 240ms;
     transition-delay: 240ms;
+	-webkit-transform: translate3d(200px,0,0);
+    -moz-transform: translate3d(200px,0,0);
+    -o-transform: translate3d(200px,0,0);
+    -ms-transform: translate3d(200px,0,0);
+    transform: translate3d(200px,0,0);
 }
 
 .started.about {
