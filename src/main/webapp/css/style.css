@@ -410,7 +410,7 @@ textarea.textarea {
 
 @media (max-width: 767px) {
     input.textarea {
-        width: 150px;
+        width: 120px;
 		height: 150px;
     }
 }
@@ -915,6 +915,20 @@ section article header h2 {
 	cursor: default;
 }
 
+.contact{
+	
+}
+
+.contact-form {
+	border: 1px dotted;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+.contact-details {
+	padding: 50px 0px 50px 0px;
+}
+
 /* Section */
 
 /* confirmation */
@@ -1234,6 +1248,57 @@ section article header h2 {
 
 @media (max-width: 767px) {
     .l-grid-3 > * {
+        width: 100%;
+    }
+}
+
+.l-grid-2 {
+    width: 980px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+@media (max-width: 1024px) {
+    .l-grid-2 {
+        width: 980px;
+    }
+}
+
+@media (max-width: 979px) {
+    .l-grid-2 {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .l-grid-2 {
+        width: 100%;
+    }
+}
+
+.l-grid-2:before,.l-grid-2:after {
+    content: "";
+    display: table;
+}
+
+.l-grid-2:after {
+    clear: both;
+}
+
+.l-grid-2 > * {
+    float: left;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 979px) {
+    .l-grid-2 > * {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .l-grid-2 > * {
         width: 100%;
     }
 }
