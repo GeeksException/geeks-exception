@@ -403,7 +403,7 @@ textarea.textarea {
 
 @media (max-width: 979px) {
     input.textarea {
-        width: 170px;
+        width: 140px;
 		height: 150px;
     }
 }
@@ -411,7 +411,7 @@ textarea.textarea {
 @media (max-width: 767px) {
     input.textarea {
         width: 120px;
-		height: 150px;
+		height: 130px;
     }
 }
 
@@ -584,6 +584,10 @@ nav ul a .counter {
 	
 	nav ul a.selected {
 		background-color: #D26911;
+		background-image: -moz-linear-gradient(#D25911, #D26911);
+		background-image: -webkit-linear-gradient(#D25911, #D26911);
+		background-image: linear-gradient(#D25911, #D26911);
+		background-repeat: repeat-x;
 	}
 }
 
@@ -926,7 +930,17 @@ section article header h2 {
 }
 
 .contact-details {
-	padding: 50px 0px 50px 0px;
+	position: relative;
+	padding: 50px 5px 50px 5px;
+}
+
+.contact-details iframe {
+	display:block;
+    width:100%;
+}
+
+.contact-details:after {
+	clear: both;
 }
 
 /* Section */
