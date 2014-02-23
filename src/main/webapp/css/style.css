@@ -886,6 +886,9 @@ section article header h2 {
 }
 
 @media (max-width: 979px) {
+	.about{
+		height: 330px;
+	}
     .about:nth-child(1) {
 		-webkit-transform: translate3d(0,200px,0);
 		-moz-transform: translate3d(0,200px,0);
