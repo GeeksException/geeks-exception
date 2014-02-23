@@ -24,7 +24,7 @@
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<nav>
 			<ul>
-				<li><div th:text="#{webapp.title}">&nbsp;GeeksException</div></li>
+				<li><div class="webapp-title" th:text="#{webapp.title}">&nbsp;GeeksException</div></li>
 				<li><a id="home" href="home.html" th:href="@{/}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), '/')} ? 'selected' : ''"><div id="home_icon"><span th:text="#{home.text}" class="menuTitle">Home</span></div></a></li>
 				<li><a id="whatwedo" href="whatwedo.html" th:href="@{/whatwedo}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'whatwedo')} ? 'selected' : ''"><div id="whatwedo_icon"><span th:text="#{whatwedo.text}" class="menuTitle">What we do</span></div></a></li>
 				<li><a id="portfolio" href="portfolio.html" th:href="@{/portfolio}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'portfolio')} ? 'selected' : ''"><div id="portfolio_icon"><span th:text="#{portfolio.text}" class="menuTitle">Portfolio</span></div></a></li>
@@ -40,16 +40,14 @@
 			  <!--<li><a href="#">Status</a></li>-->
 			</ul>
 		
-	    <a href="/">
-			
-	    </a>
-	
-	    <ul class="site-footer-links">
-			<li th:text="#{copyright.text}">&copy; 2014 GeeksException, inc.</li>
-			<li><div class="facebookLike"><div class="fb-like" data-colorscheme="dark" data-href="http://www.facebook.com/geeksexception" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div></li>
-	        <!--<li><a href="#">Terms</a></li>-->
-	    </ul>
-	  </div>
+			<a href="#" th:href="@{/}"><div class="small-icon"></div></a>
+		
+			<ul class="site-footer-links">
+				<li th:text="#{copyright.text}">&copy; 2014 GeeksException, inc.</li>
+				<!--<li><a href="#">Terms</a></li>-->
+				<li><div class="facebookLike"><div class="fb-like" data-colorscheme="dark" data-href="http://www.facebook.com/geeksexception" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div></li>
+			</ul>
+		</div>
 	</footer>
 </body>
 </html>

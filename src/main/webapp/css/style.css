@@ -395,23 +395,23 @@ textarea.textarea {
 }
 
 @media (max-width: 1024px) {
-    input.textarea {
-        width: 220px;
+    textarea.textarea {
+        width: 250px;
 		height: 180px;
     }
 }
 
 @media (max-width: 979px) {
-    input.textarea {
-        width: 170px;
-		height: 150px;
+    textarea.textarea {
+        width: 200px;
+		height: 130px;
     }
 }
 
 @media (max-width: 767px) {
-    input.textarea {
-        width: 150px;
-		height: 140px;
+    textarea.textarea {
+        width: 180px;
+		height: 120px;
     }
 }
 
@@ -704,6 +704,10 @@ nav ul a .counter {
     .container {
         width: 100%;
     }
+}
+
+.webapp-title {
+	vertical-align: center;
 }
 
 /* Section */
@@ -1397,6 +1401,37 @@ section article header h2 {
 	background-position: 0 -32px ;
 	width: 32px;
 	height: 32px;
+}
+
+.small-icon {
+	position:absolute;
+	display:inline-block;
+	-webkit-font-smoothing:antialiased;
+	background-image: url('../img/logo.png');
+	background-position: 0px 0;
+	height: 32px;
+	width: 32px;
+	top:38px;
+	left:50%;
+}
+
+@media (max-width: 979px) {
+    .small-icon {
+        top:15px;
+		left:90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .small-icon {
+        top:5px;
+		left:90%;
+    }
+}
+
+.small-icon:hover {
+	background-image: url('../img/logo.png');
+	background-position: -32px 0;
 }
 /* icons */
 
