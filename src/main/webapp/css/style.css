@@ -986,6 +986,14 @@ section article header h2 {
 	clear: both;
 }
 
+.chief-scientist {
+	border: 2px dotted;
+}
+
+.chief-scientist h2 {
+	text-align: right;
+}
+
 /* Section */
 
 /* confirmation */
