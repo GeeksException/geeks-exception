@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="GeeksException" />
+	<meta name="description" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
 	<title th:text="#{webapp.title}">Sample</title>
 	
-	<!-- Facebook OpenGraph Tags -->
+	<meta property="og:site_name" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta property="og:title" content="GeeksException" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.geeksexception.com" />
@@ -16,6 +16,8 @@
 	<meta property="fb:app_id" content="582399555170253" />
 	<meta property="og:description" content="Enterprise level web &amp; mobile development." />
 	
+	<link rel="icon" type="image/ico" href="../../img/favicon.ico" th:href="@{/img/favicon.ico}" />
+	<link rel="canonical" href="http://www.geeksexception.com" />
 	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
 	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
 	<!--[if IE]>
@@ -25,66 +27,67 @@
 <body>
 	<header th:include="common :: header"></header>
 	<div class="container">
-	<section class="intro">
-		<article>
-			<header>
-				<h1 class="section-title">Talk to us</h1>
-			</header>
-			
-			<div class="l-grid-2">
-				<div class="contact">
-					<div class="contact-details">
-						<h2>20 Pasir Panjang Road Singapore 117439</h2>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8305908931334!2d103.79892900000002!3d1.2749379000000212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1bc0ae931fbd%3A0xe7995ee88d76f629!2s20+Pasir+Panjang+Rd!5e0!3m2!1sen!2ssg!4v1392992677199" width="400" height="300" frameborder="0" style="border:0"></iframe>
-					</div>
-				</div>
-				<div class="contact">
-					<div class="contact-form">
-						<div th:if="${info != null}" class="confirmation">
-							<p th:text="#{mail.confirmation}">Your concern has been sent to our team. We will get back to you as soon as we can. Thank you!</p>
+		<section class="intro">
+			<article>
+				<header>
+					<h1 class="section-title">Talk to us</h1>
+				</header>
+				
+				<div class="l-grid-2">
+					<div class="contact">
+						<div class="contact-details">
+							<div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><h2><span itemprop="streetAddress">20 Pasir Panjang Road</span> <span itemprop="addressLocality">Singapore</span> <span itemprop="postalCode">117439</span></h2></div>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8305908931334!2d103.79892900000002!3d1.2749379000000212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1bc0ae931fbd%3A0xe7995ee88d76f629!2s20+Pasir+Panjang+Rd!5e0!3m2!1sen!2ssg!4v1392992677199" width="400" height="300" frameborder="0" style="border:0"></iframe>
+							<div>Mail us at <a href="mailto:support@geeksexception.com"><span itemprop="email">support@geeksexception.com</span></a></div>
 						</div>
-						<h2>We love to hear from you,</h2>
-						<h3>Send us a mail!</h3>
-						
-						<form action="#" th:action="@{/contact/send}" th:object="${concern}" method="post">
-							<table>
-								<tbody>
-									<tr>
-										<td><label for="name">Name</label></td>
-										<td><input id="name" name="name" class="textbox default" type="text" title="Please enter your name" placeholder="Enter your name&hellip;" required="required" th:field="*{name}" /></td>
-									</tr>
-									<tr><td colspan="2">&nbsp;</td></tr>
-									<tr>
-										<td><label for="phone">Phone number</label></td>
-										<td><input id="phone" name="phone" class="textbox default" type="text" title="Please enter your email" placeholder="Enter your phone number&hellip;" required="required" th:field="*{phone}" /></td>
-									</tr>
-									<tr><td colspan="2">&nbsp;</td></tr>
-									<tr>
-										<td><label for="email">E-mail</label></td>
-										<td><input id="email" name="email" class="textbox default" type="email" title="Please enter your email" placeholder="Enter your email&hellip;" required="required" th:field="*{email}" /></td>
-									</tr>
-									<tr><td colspan="2">&nbsp;</td></tr>
-									<tr>
-										<td><label for="concern">Concern</label></td>
-										<td>
-											<textarea id="concern" name="concern" class="textarea default" title="Please enter your concern" placeholder="Enter your concern&hellip;" required="required" th:field="*{concern}"></textarea>
-										</td>
-									</tr>
-									<tr><td colspan="2">&nbsp;</td></tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td>&nbsp;</td>
-										<td align="right"><button class="button">Send</button></td>
-									</tr>
-								</tfoot>
-							</table>
-						</form>
+					</div>
+					<div class="contact">
+						<div class="contact-form">
+							<div th:if="${info != null}" class="confirmation">
+								<p th:text="#{mail.confirmation}">Your concern has been sent to our team. We will get back to you as soon as we can. Thank you!</p>
+							</div>
+							<h2>We love to hear from you,</h2>
+							<h3>Send us a mail!</h3>
+							
+							<form action="#" th:action="@{/contact/send}" th:object="${concern}" method="post">
+								<table>
+									<tbody>
+										<tr>
+											<td><label for="name">Name</label></td>
+											<td><input id="name" name="name" class="textbox default" type="text" title="Please enter your name" placeholder="Enter your name&hellip;" required="required" th:field="*{name}" /></td>
+										</tr>
+										<tr><td colspan="2">&nbsp;</td></tr>
+										<tr>
+											<td><label for="phone">Phone number</label></td>
+											<td><input id="phone" name="phone" class="textbox default" type="text" title="Please enter your email" placeholder="Enter your phone number&hellip;" required="required" th:field="*{phone}" /></td>
+										</tr>
+										<tr><td colspan="2">&nbsp;</td></tr>
+										<tr>
+											<td><label for="email">E-mail</label></td>
+											<td><input id="email" name="email" class="textbox default" type="email" title="Please enter your email" placeholder="Enter your email&hellip;" required="required" th:field="*{email}" /></td>
+										</tr>
+										<tr><td colspan="2">&nbsp;</td></tr>
+										<tr>
+											<td><label for="concern">Concern</label></td>
+											<td>
+												<textarea id="concern" name="concern" class="textarea default" title="Please enter your concern" placeholder="Enter your concern&hellip;" required="required" th:field="*{concern}"></textarea>
+											</td>
+										</tr>
+										<tr><td colspan="2">&nbsp;</td></tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>&nbsp;</td>
+											<td align="right"><button class="button">Send</button></td>
+										</tr>
+									</tfoot>
+								</table>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-		</article>
-	</section>
+			</article>
+		</section>
 	</div>
 	<footer th:include="common :: footer"></footer>
 	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
