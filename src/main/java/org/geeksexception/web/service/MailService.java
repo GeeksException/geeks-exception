@@ -10,12 +10,13 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.apache.log4j.Logger;
 import org.geeksexception.web.model.Concern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MailService {
 	
-	private final Logger logger = Logger.getLogger(getClass());
+	private final Logger logger = LoggerFactory.getLogger(getClass());
 	
 	private Properties properties;
 	
