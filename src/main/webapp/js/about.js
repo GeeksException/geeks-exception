@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$("#btnSubmit").click(function(){
 		if(validate()) return;
-		$("#btnSubmit").attr("disabled", "disabled");
+		$("#btnSubmit").button('loading');
 		$("#formFeedback").submit();
 	});
 	
@@ -25,12 +25,12 @@ $(document).ready(function(){
 			success: function(concern) {
 				console.log(concern);
 				clear();
-				$("#btnSubmit").removeAttr("disabled");
+				$("#btnSubmit").button('reset');
 				$("#confirmation").html('<div id="confirmation" class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span class="glyphicon glyphicon-ok-circle"></span> <strong>Success!</strong> Your message is sent to our team!</div>');
 			},
 			
 			error: function() {
-				$("#btnSubmit").removeAttr("disabled");
+				$("#btnSubmit").button('reset');
 				$("#confirmation").html('<div id="confirmation" class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><span class="glyphicon glyphicon-remove-circle"></span> <strong>Failed!</strong> Something seems wrong. Let us get back to you on this.</div>');
 			}
 		});
