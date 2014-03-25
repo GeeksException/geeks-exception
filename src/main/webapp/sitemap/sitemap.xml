@@ -3,6 +3,10 @@
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 	xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 	<url>
+		<loc>http://www.geeksexception.com</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
 		<loc>http://www.geeksexception.com/whatwedo</loc>
 		<changefreq>always</changefreq>
 	</url>
@@ -12,10 +16,6 @@
 	</url>
 	<url>
 		<loc>http://www.geeksexception.com/about</loc>
-		<changefreq>always</changefreq>
-	</url>
-	<url>
-		<loc>http://www.geeksexception.com/contact</loc>
 		<changefreq>always</changefreq>
 	</url>
 </urlset>
