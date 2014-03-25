@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="description" content="GeeksException: Enterprise level web &amp; mobile development." />
-	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<title th:text="#{webapp.title}">Sample</title>
+	<title th:text="#{webapp.title}">GeeksException</title>
 	
 	<meta property="og:site_name" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta property="og:title" content="GeeksException" />
@@ -18,45 +18,87 @@
 	
 	<link rel="icon" type="image/ico" href="../../img/favicon.ico" th:href="@{/img/favicon.ico}" />
 	<link rel="canonical" href="http://www.geeksexception.com" />
-	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
-	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
-	<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	
+	<link href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<header th:include="common :: header"></header>
-	<div class="container">
-		<section class="intro">
-			<article>
-				<header>
-					<h1 class="section-title">Geeks Exception</h1>
-				</header>
-				<div id="slider">
-					<div class="slider_images">
-						<ul>
-							<li><img src="../../img/geeksexception/geeksexceptionfinal.png" th:src="@{/img/geeksexception/geeksexceptionfinal.png}" alt="Continuous Excellence" title="Continuous Excellence" id="wows1_0"/></li>
-							<li><img src="../../img/geeksexception/geeksexceptionfinal2.png" th:src="@{/img/geeksexception/geeksexceptionfinal2.png}" alt="Collaboration" title="Collaboration" id="wows1_1"/></li>
-							<li><img src="../../img/geeksexception/geeksexceptionfinal3.png" th:src="@{/img/geeksexception/geeksexceptionfinal3.png}" alt="Simplicity" title="Simplicity" id="wows1_2"/></li>
-							<li><img src="../../img/geeksexception/geeksexceptionfinal4.png" th:src="@{/img/geeksexception/geeksexceptionfinal4.png}" alt="Client Satisfaction" title="Client Satisfaction" id="wows1_3"/></li>
-						</ul>
-					</div>
-					<div class="slider_bullets">
-						<div>
-							<a href="#" title="GeeksException1"><img src="../../img/tooltips/geeksexceptionfinal.png" th:src="@{/img/tooltips/geeksexceptionfinal.png}" alt="GeeksException1"/>1</a>
-							<a href="#" title="GeeksException2"><img src="../../img/tooltips/geeksexceptionfinal2.png" th:src="@{/img/tooltips/geeksexceptionfinal2.png}" alt="GeeksException2"/>2</a>
-							<a href="#" title="GeeksException3"><img src="../../img/tooltips/geeksexceptionfinal3.png" th:src="@{/img/tooltips/geeksexceptionfinal3.png}" alt="GeeksException3"/>3</a>
-							<a href="#" title="GeeksException4"><img src="../../img/tooltips/geeksexceptionfinal4.png" th:src="@{/img/tooltips/geeksexceptionfinal4.png}" alt="GeeksException4"/>4</a>
-						</div>
-					</div>
-					<a href="#" class="slider_frame"></a>
-					<div class="slider_shadow"></div>
-				</div>
-			</article>
-		</section>
+	<div class="navbar-wrapper">
+		<div class="container">
+			<div th:include="common :: header" class="navbar navbar-inverse navbar-static-top" role="navigation"></div>
+		</div>
 	</div>
-	<footer th:include="common :: footer"></footer>
-	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
-	<script src="../../js/application.js" th:src="@{/js/application.js}"></script>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Continuous Excellence" alt="Continuous Excellence" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Continuous Excellence</h1>
+						<p><code>Under construction</code></p>
+						<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Collaboration" alt="Collaboration" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Collaboration</h1>
+						<p><code>Under construction</code></p>
+						<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Simplicity" alt="Simplicity" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Simplicity</h1>
+						<p><code>Under construction</code></p>
+						<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:Client Satisfaction" alt="Client Satisfaction" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Client Satisfaction</h1>
+						<p><code>Under construction</code></p>
+						<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	</div><!-- /.carousel -->
+	
+	<div class="container">
+		<div class="jumbotron">
+			<h1>GeeksException Home</h1>
+			<p><code>Under construction</code></p>
+			<p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+		</div>
+		
+		<footer th:include="common :: footer"></footer>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<script src="../../js/docs.min.js" th:src="@{/js/docs.min.js}"></script>
 </body>
 </html>

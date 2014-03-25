@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="GeeksException" />
-	<meta name="HandheldFriendly" content="True" />
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<title th:text="#{webapp.title}">Sample</title>
+	<title th:text="#{webapp.title}">GeeksException</title>
 	
-	<!-- Facebook OpenGraph Tags -->
+	<meta property="og:site_name" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta property="og:title" content="GeeksException" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.geeksexception.com" />
@@ -17,147 +17,146 @@
 	<meta property="og:description" content="Enterprise level web &amp; mobile development." />
 	
 	<link rel="icon" type="image/ico" href="../../img/favicon.ico" th:href="@{/img/favicon.ico}" />
-	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
-	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
-	<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<link rel="canonical" href="http://www.geeksexception.com" />
+	
+	<link href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-	<header th:include="common :: header"></header>
-	<div class="container">
-		<section class="intro">
-			<article>
-				<header>
-					<h1 class="section-title">Want to know more about us?</h1>
-				</header>
-			</article>
-		</section>
-		
-		<section>
-			<div class="l-grid-3">
-				<div class="about">
-					<div class="about-title">
-						<h2>All about us</h2>
-					</div>
-					
-					<div class="about-content">
-						<p class="medium">We are a group of innovative and talented individuals that drive excellence at what we do. A team that is passionate in building software solutions that can transform user experience to a whole new level. What's more, we don't just build software by what the users tell us, we build software by what they really need even when they don't know it yet. Building a company that embraces this concept is very challenging yet very exciting for us. After all, everything is impossible until it's done!</p>
-					</div>
-				</div>
-				
-				<div class="about">
-					<div class="about-title">
-						<h2>The purpose</h2>
-					</div>
-					
-					<div class="about-content">
-						<p class="medium">We provide a variety of enterprise software services and product support ranging from website and mobile website design to enterprise software solutions. The technology that we employ is different and tailored for every customer needs. We utilize powerful open source frameworks and tools that are widely used by communities and organizations today.</p>
-					</div>
-					<div class="about-content">
-						<p class="medium">Currently, we are adapting the mobile platforms development to enable our clients to utilize their applications on their handheld devices and enable us to leverage the power of mobile apps.</p>
-					</div>
-				</div>
-				
-				<div class="about">
-					<div class="about-title">
-						<h2>Our core values</h2>
-					</div>
-					
-					<div class="about-content">
-						<p class="medium">Our core values are closely related to the principles behind the agile software development methodology. We have been agile proponents since the company's inception. The following are our key core values:</p>
-						<div>
-							<ul>
-								<li>- Customer satisfaction and customer collaboration</li>
-								<li>- Continuous technical excellence</li>
-								<li>- Working software as primary measure of progress</li>
-								<li>- Simplicity</li>
-								<li>- Self-organizing teams</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<section>
-			<header>
-				<h1 class="section-title">Meet our chief scientists</h1>
-			</header>
-			<div class="l-grid-3">
-				<div class="chief-scientist">
-					<span itemprop="founder" itemscope="" itemtype="http://schema.org/Person">
-						<div class="avatar"><img src="../../img/geeksexception/chiefs/joseph.png" th:src="@{/img/geeksexception/chiefs/joseph.png}" /></div>
-						<div class="chief-scientist-header">
-							<h2>
-								<span itemprop="name">
-									<span itemprop="givenName">Joseph</span>
-									<span itemprop="familyName">Bagnes</span>
-								</span>
-							</h2>
-						</div>
-						
-						<div class="chief-scientist-body">
-							<span itemprop="description">
-								<p>
-									Java Enterprise Applications Specialist, OCPJP, OCEWCD, OCEJPAD.<br />
-									Has strong experience in back-end development using JavaEE and well-known frameworks, platforms, and architectures. Currently working as Application Security Developer/Consultant with good knowledge and experience in securing critical and sensitive applications that are being used by wide-range of end users. 
-									<br /><br />
-									Skill set: Standard JavaEE Technologies, Spring, Hibernate, .Net Technology, Web services, Kerberos, TDD and BDD, Agile methodology. <a href="mailto:josephbagnes@gmail.com">Contact me</a>, <a href="http://www.linkedin.com/pub/joseph-bernabe-bagnes/24/aa/5b" target="_blank">LinkedIn</a>
-								</p>
-							</span>
-						</div>
-					</span>
-				</div>
-				<div class="chief-scientist">
-					<span itemprop="founder" itemscope="" itemtype="http://schema.org/Person">
-						<div class="avatar"><img src="../../img/geeksexception/chiefs/geng.png" th:src="@{/img/geeksexception/chiefs/geng.png}" /></div>
-						<div class="chief-scientist-header">
-							<h2>
-								<span itemprop="name">
-									<span itemprop="givenName">Gerard</span>
-									<span itemprop="familyName">Delas Armas</span>
-								</span>
-							</h2>
-						</div>
-						
-						<div class="chief-scientist-body">
-							<span itemprop="description">
-								<p>
-									Java Developer that is enthusiastic in learning new technologies in Java, in designing solutions in an elegant way, in building robust and scalable enterprise applications and in the principle of agile craftmanship.
-									
-									<br /><br />Currently holding 4 Oracle Java certificates: Oracle Certified Professional, Java SE 6 Programmer, Oracle Certified Expert, Java EE 6 Web Component Developer, Oracle Certified Expert, Java EE 6 Java Persistence API Developer and Oracle Certified Expert, EE 6 Web Services Developer
-								</p>
-							</span>
-						</div>
-					</span>
-				</div>
-				<div class="chief-scientist">
-					<span itemprop="founder" itemscope="" itemtype="http://schema.org/Person">
-						<div class="avatar"><img src="../../img/geeksexception/chiefs/charles.png" th:src="@{/img/geeksexception/chiefs/charles.png}" /></div>
-						<div class="chief-scientist-header">
-							<h2>
-								<span itemprop="name">
-									<span itemprop="givenName">Charles Amiel</span>
-									<span itemprop="familyName">Vicencio</span>
-								</span>
-							</h2>
-						</div>
-						
-						<div class="chief-scientist-body">
-							<span itemprop="description">
-								<p>
-									Charles is like a mobile phone. Sometimes he is in "General mode" where he makes a lot of noise in such a way that he wants people to notice what he’s doing or will just tell people things he did. More often than this mode, he is in "Vibrate mode" where he will just laugh if something funny just happened or simply react to pretend that he exists or being part of a group. But in most cases, you will find him in "Silent mode" where you need to have the initiative to check him out.
-								</p>
-							</span>
-						</div>
-					</span>
-				</div>
-			</div>
-		</section>
+<body class="paddingTop">
+	<div class="navbar-wrapper">
+		<div class="container">
+			<div th:include="common :: header" class="navbar navbar-inverse navbar-static-top" role="navigation"></div>
+		</div>
 	</div>
-	<footer th:include="common :: footer"></footer>
-	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
-	<script src="../../js/application.js" th:src="@{/js/application.js}"></script>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<h1>About us</h1>
+			<p><code>Under construction</code></p>
+			<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+		</div>
+		
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">Knowing the geeks. <span class="text-muted">It'll blow your mind.</span></h2>
+				<p class="lead"><code>Under construction</code></p>
+			</div>
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+			</div>
+		</div>
+		
+		<hr class="featurette-divider" />
+		
+		<div class="row featurette">
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading">Our purpose. <span class="text-muted">See for yourself.</span></h2>
+				<p class="lead"><code>Under construction</code></p>
+			</div>
+		</div>
+		
+		<hr class="featurette-divider" />
+		
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">Core values. <span class="text-muted">Checkmate.</span></h2>
+				<p class="lead"><code>Under construction</code></p>
+			</div>
+			<div class="col-md-5">
+				<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+			</div>
+		</div>
+		
+		<hr class="featurette-divider" />
+		
+		<div class="row">
+			<div class="col-lg-4">
+				<img class="img-circle" src="../../img/geeksexception/chiefs/joseph_blue.png" th:src="@{/img/geeksexception/chiefs/joseph_blue.png}" alt="Generic placeholder image" />
+				<h2>Joseph BAGNES</h2>
+				<p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:josephbagnes@geeksexception.com">josephbagnes@geeksexception.com</a><br /><br />
+					Specializes on Standard JavaEE Technologies, Spring, Hibernate, .Net Technology, Web services, Kerberos, Test-Driven Development and Behavior-Driven Development, Agile methodology, Native Android Mobile Development
+				</p>
+				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-circle" src="../../img/geeksexception/chiefs/geng_blue.png" th:src="@{/img/geeksexception/chiefs/geng_blue.png}" alt="Generic placeholder image" />
+				<h2>Geng DE LAS ARMAS</h2>
+				<p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:gengstah@geeksexception.com">gengstah@geeksexception.com</a><br /><br />
+					Specializes on Standard JavaEE Technologies, Spring, Hibernate, Web services, Kerberos, Test-Driven Development and Behavior-Driven Development, Agile craftmanship, Continuous Integration and Deployment, Native iOS Mobile Development
+				</p>
+				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			</div>
+			<div class="col-lg-4">
+				<img class="img-circle" src="../../img/geeksexception/chiefs/charles_blue.png" th:src="@{/img/geeksexception/chiefs/charles_blue.png}" alt="Generic placeholder image" />
+				<h2>Charles VICENCIO</h2>
+				<p><span class="glyphicon glyphicon-envelope"></span> <a href="charlesamiel.vicencio@geeksexception.com">charlesamiel.vicencio@geeksexception.com</a><br /><br />
+					Specializes on .Net Technology, Silverlight technology, cross-platform mobile development, web design, Agile methodology, Test-Driven Development and Behavior-Driven Development, Spring.NET, Entity Framework, NHibernate
+				</p>
+				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			</div>
+		</div>
+		
+		<hr class="featurette-divider" />
+		
+		<div class="col-md-6">
+			<div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+				<address>
+					<strong>GeeksException</strong><br />
+					<span itemprop="streetAddress">20 Pasir Panjang Road,</span><br />
+					<span itemprop="addressLocality">Singapore City, Singapore</span>
+					<span itemprop="postalCode">117439</span><br />
+					<abbr title="Email">E:</abbr><a href="mailto:support@geeksexception.com"><span itemprop="email">support@geeksexception.com</span></a>
+				</address>
+			</div>
+		</div>
+		
+		<h1>We love to hear from you,</h1>
+		<div class="col-md-6">
+			<form id="formFeedback" action="#" th:action="@{/about/send}" method="POST" role="form">
+				<legend>Send us a mail</legend>
+				<div id="confirmation"></div>
+				<div id="formGroupName" class="form-group">
+					<label for="name">Name</label>
+					<input id="name" name="name" class="form-control" type="text" title="Please enter your name" placeholder="Enter your name&hellip;" required="required" />
+				</div>
+				
+				<div id="formGroupPhone" class="form-group has-feedback">
+					<label for="phone">Phone</label>
+					<input id="phone" name="phone" class="form-control" type="tel" title="Please enter your email" placeholder="Enter your phone number&hellip;" required="required" />
+					<span class="glyphicon glyphicon-phone form-control-feedback"></span>
+				</div>
+				
+				<div id="formGroupEmail" class="form-group has-feedback">
+					<label for="email">Email</label>
+					<input id="email" name="email" class="form-control" type="email" title="Please enter your email" placeholder="Enter your email&hellip;" required="required" />
+					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+				</div>
+				
+				<div id="formGroupConcern" class="form-group">
+					<label for="concern">Concern</label>
+					<textarea id="concern" name="concern" class="form-control" title="Please enter your concern" placeholder="Enter your concern&hellip;" required="required"></textarea>
+				</div>
+				<p><button id="btnSubmit" type="button" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-send"></span> Send</button></p>
+			</form>
+		</div>
+		
+		<div class="clearfix">
+			<footer th:include="common :: footer"></footer>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<script src="../../js/docs.min.js" th:src="@{/js/docs.min.js}"></script>
+	<script src="../../js/about.js" th:src="@{/js/about.js}"></script>
 </body>
 </html>

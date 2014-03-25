@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="GeeksException" />
-	<meta name="HandheldFriendly" content="True" />
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
-	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
-	<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<link href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
-	<header th:fragment="header">
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=582399555170253";
-					fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=582399555170253";
+				fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<!-- <header th:fragment="header">
 		<nav>
 			<ul>
 				<li><div class="webapp-title" th:text="#{webapp.title}">&nbsp;GeeksException</div></li>
@@ -34,22 +32,33 @@
 				<li><a id="contact" href="contact.html" th:href="@{/contact}" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'contact')} ? 'selected' : ''"><div id="contact_icon"><span th:text="#{contact.text}" class="menuTitle">Contact</span></div></a></li>
 		    </ul>
 		</nav>
-	</header>
+	</header> -->
+	
+	<div th:fragment="header">
+        <div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/" th:text="#{webapp.title}">GeeksException</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active" th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), '/')} ? 'active' : ''"><a id="home" href="home.html" th:href="@{/}" th:text="#{home.text}">Home</a></li>
+					<li th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'whatwedo')} ? 'active' : ''"><a id="whatwedo" href="whatwedo.html" th:href="@{/whatwedo}" th:text="#{whatwedo.text}">What we do</a></li>
+					<li th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'portfolio')} ? 'active' : ''"><a id="portfolio" href="portfolio.html" th:href="@{/portfolio}" th:text="#{portfolio.text}">Portfolio</a></li>
+					<li th:class="${#strings.endsWith(#httpServletRequest.getRequestURI(), 'about')} ? 'active' : ''"><a id="aboutus" href="about.html" th:href="@{/about}" th:text="#{about.text}">About</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+	</div>
 	
 	<footer th:fragment="footer">
-		<div class="site-footer">
-			<ul class="site-footer-links right">
-			  <!--<li><a href="#">Status</a></li>-->
-			</ul>
-			
-			<a href="#" th:href="@{/}"><div class="small-icon"></div></a>
-		
-			<ul class="site-footer-links">
-				<li th:text="#{copyright.text}">&copy; 2014 GeeksException, inc.</li>
-				<!--<li><a href="#">Terms</a></li>-->
-				<li><div class="facebookLike"><div class="fb-like" data-colorscheme="dark" data-href="http://www.facebook.com/geeksexception" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></div></li>
-			</ul>
-		</div>
+		<p class="pull-right"><a href="#">Back to top</a></p>
+		<p>&copy; 2014 GeeksException &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 	</footer>
 </body>
 </html>

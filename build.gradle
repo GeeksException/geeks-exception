@@ -32,6 +32,8 @@ dependencies {
 	
 	compile "org.slf4j:slf4j-api:1.7.6"
 	compile "ch.qos.logback:logback-classic:1.1.1"
+	
+	runtime "org.codehaus.jackson:jackson-mapper-asl:1.9.13"
 }
 
 task wrapper(type: Wrapper) {

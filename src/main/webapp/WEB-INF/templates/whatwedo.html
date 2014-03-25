@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="GeeksException" />
-	<meta name="HandheldFriendly" content="True" />
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<title th:text="#{webapp.title}">Sample</title>
+	<title th:text="#{webapp.title}">GeeksException</title>
 	
-	<!-- Facebook OpenGraph Tags -->
+	<meta property="og:site_name" content="GeeksException: Enterprise level web &amp; mobile development." />
 	<meta property="og:title" content="GeeksException" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.geeksexception.com" />
@@ -17,79 +17,97 @@
 	<meta property="og:description" content="Enterprise level web &amp; mobile development." />
 	
 	<link rel="icon" type="image/ico" href="../../img/favicon.ico" th:href="@{/img/favicon.ico}" />
-	<link href='../../css/normalize.css' th:href="@{/css/normalize.css}" rel='stylesheet' type='text/css' />
-	<link href='../../css/style.css' th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
-	<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<link rel="canonical" href="http://www.geeksexception.com" />
+	
+	<link href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	<link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-	<header th:include="common :: header"></header>
-	<div class="container">
-		<section class="intro">
-			<article>
-				<header>
-					<h1 class="section-title">Enterprise level web &amp; mobile development</h1>
-				</header>
-				
-				<div class="l-grid-4">
-					<div class="competence">
-						<div class="competence-icon">
-							<img class="competence-icon-img" src="../../img/icon-native.png" th:src="@{/img/icon-native.png}" />
-						</div>
-						<h2 class="competence-title">
-							Native
-							Android/iOS
-						</h2>
-						<p class="competence-description">
-							Ground breaking apps that focuses on user experience and performance.
-						</p>
-					</div>
-					
-					<div class="competence">
-						<div class="competence-icon">
-							<img class="competence-icon-img" src="../../img/html5.png" th:src="@{/img/html5.png}" />
-						</div>
-						<h2 class="competence-title">
-							Web based
-							apps
-						</h2>
-						<p class="competence-description">
-							Revolutionary technology and design combined.
-						</p>
-					</div>
-					
-					<div class="competence">
-						<div class="competence-icon">
-							<img class="competence-icon-img" src="../../img/software.png" th:src="@{/img/software.png}" />
-						</div>
-						<h2 class="competence-title">
-							Enterprise-level
-							software
-						</h2>
-						<p class="competence-description">
-							Agile software development &amp; deployment with great attention to quality.
-						</p>
-					</div>
-					
-					<div class="competence">
-						<div class="competence-icon">
-							<img class="competence-icon-img" src="../../img/learn-contribute.png" th:src="@{/img/learn-contribute.png}" />
-						</div>
-						<h2 class="competence-title">
-							Learn &amp;
-							contribute
-						</h2>
-						<p class="competence-description">
-							Passion is what makes us. We never stop learning.
-						</p>
-					</div>
-				</div>
-			</article>
-		</section>
+<body class="paddingTop">
+	<div class="navbar-wrapper">
+		<div class="container">
+			<div th:include="common :: header" class="navbar navbar-inverse navbar-static-top" role="navigation"></div>
+		</div>
 	</div>
-	<footer th:include="common :: footer"></footer>
-	<script src="../../js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
-	<script src="../../js/application.js" th:src="@{/js/application.js}"></script>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>ENTERPRISE LEVEL WEB &amp; MOBILE DEVELOPMENT</h1>
+			<p><code>Under construction</code></p>
+			<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="competence">
+				<div class="competence-icon">
+					<img class="competence-icon-img" src="../../img/icon-native.png" th:src="@{/img/icon-native.png}" />
+				</div>
+				<h2 class="competence-title">
+					Native
+					Android/iOS
+				</h2>
+				<p class="competence-description">
+					Ground breaking apps that focuses on user experience and performance.
+				</p>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="competence">
+				<div class="competence-icon">
+					<img class="competence-icon-img" src="../../img/html5.png" th:src="@{/img/html5.png}" />
+				</div>
+				<h2 class="competence-title">
+					Web based
+					apps
+				</h2>
+				<p class="competence-description">
+					Revolutionary technology and design combined.
+				</p>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="competence">
+				<div class="competence-icon">
+					<img class="competence-icon-img" src="../../img/software.png" th:src="@{/img/software.png}" />
+				</div>
+				<h2 class="competence-title">
+					Enterprise-level
+					software
+				</h2>
+				<p class="competence-description">
+					Agile software development &amp; deployment with great attention to quality.
+				</p>
+			</div>
+		</div>
+		
+		<div class="col-md-3">
+			<div class="competence">
+				<div class="competence-icon">
+					<img class="competence-icon-img" src="../../img/learn-contribute.png" th:src="@{/img/learn-contribute.png}" />
+				</div>
+				<h2 class="competence-title">
+					Learn &amp;
+					contribute
+				</h2>
+				<p class="competence-description">
+					Passion is what makes us. We never stop learning.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<footer th:include="common :: footer"></footer>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<script src="../../js/whatwedo.js" th:src="@{/js/whatwedo.js}"></script>
 </body>
 </html>
